@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Molly - Single Page Design" />
+    <meta
+      property="og:description"
+      content="A modern, fully responsive Results Summary component featuring semantic markup and accessible UI design.."
+    />
+    <meta
+      property="og:image"
+      content="https://momo97x.github.io/Result-Summery-Component/assets/images/desktop-preview.jpg"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta
+      property="og:image:alt"
+      content="Preview of the Results Summary Component project"
+    />
+
+    <title>Frontend Mentor | Results summary component</title>
+    <meta
+      name="description"
+      content="A responsive Results Summary Component built with HTML5, CSS3, and modern Flexbox/Grid techniques. Fully accessible and designed based on Frontend Mentor standards."
+    />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      @font-face {
+        font-family: hankenBold;
+        src: url(/assets/fonts/static/HankenGrotesk-Bold.ttf);
+        font-size: 500;
+      }
+
+      @font-face {
+        font-family: handkenMedium;
+        src: url(/assets/fonts/static/HankenGrotesk-Medium.ttf);
+        font-size: 700;
+      }
+
+      @font-face {
+        font-family: handkenExtraBold;
+        src: url(/assets/fonts/static/HankenGrotesk-Bold.ttf);
+        font-size: 800;
+      }
+
+      :root {
+        /* primary colors */
+        --Light-red: #ff5757;
+        --Orangey-yellow: #ffb01f;
+        --Green-teal: #00bd91;
+        --Cobalt-blue: #1125d4;
+        /* gradients */
+        --Light-slate-blue-background: #7857ff;
+        --Light-royal-blue-background: #2e2be9;
+        --Violet-blue-circle: #4e21ca;
+        --Persian-blue-circle: #2421ca00;
+        /* Neutral colros */
+        --White: #ffffff;
+        --Pale-blue: #ebf1ff;
+        --Light-lavender: #c8c7ff;
+        --Dark-gray-blue: #303b5a;
+        /* font size */
+        --font-size-paragraphs: 1.125rem;
+      }
+
+      /*.attribution {font-size: 0.6875rem;text-align: center;}
+        .attribution a {color: #3d52a3;} */
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <article class="result-card">
+        <!-- Left Panel: Main Score Result -->
+        <section class="result-section">
+          <h2 class="section-title">Your Result</h2>
+
+          <div class="score-circle">
+            <p class="score-number">76</p>
+            <p class="score-total">of 100</p>
+          </div>
+
+          <h3 class="score-status">Great</h3>
+          <p class="score-description">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </section>
+
+        <!-- Right Panel: Category Summary -->
+        <section class="summary-section">
+          <h2 class="section-title">Summary</h2>
+
+          <ul class="summary-list">
+            <li class="summary-item item-reaction">
+              <div class="category-info">
+                <img
+                  src="/assets/images/icon-reaction.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span class="category-name">Reaction</span>
+              </div>
+              <p class="category-score">
+                <span class="score-obtained">80</span> / 100
+              </p>
+            </li>
+
+            <li class="summary-item item-memory">
+              <div class="category-info">
+                <img
+                  src="/assets/images/icon-memory.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span class="category-name">Memory</span>
+              </div>
+              <p class="category-score">
+                <span class="score-obtained">92</span> / 100
+              </p>
+            </li>
+
+            <li class="summary-item item-verbal">
+              <div class="category-info">
+                <img
+                  src="/assets/images/icon-verbal.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span class="category-name">Verbal</span>
+              </div>
+              <p class="category-score">
+                <span class="score-obtained">61</span> / 100
+              </p>
+            </li>
+
+            <li class="summary-item item-visual">
+              <div class="category-info">
+                <img
+                  src="/assets/images/icon-visual.svg"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <span class="category-name">Visual</span>
+              </div>
+              <p class="category-score">
+                <span class="score-obtained">73</span> / 100
+              </p>
+            </li>
+          </ul>
+
+          <button type="button" class="btn-continue">Continue</button>
+        </section>
+      </article>
+    </main>
+    <!--  Your Result 76 of 100 Great You scored higher than 65% of the people who
+    have taken these tests. Summary Reaction 80 / 100 Memory 92 / 100 Verbal 61
+    / 100 Visual 72 / 100 Continue -->
+
+    <!-- <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Muhammed Arrujbani</a>.
+    </footer> -->
+  </body>
+</html>
