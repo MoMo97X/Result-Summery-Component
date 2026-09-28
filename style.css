@@ -74,14 +74,6 @@ ul {
   text-align: center;
   font-family:
     hankenMedium,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
@@ -197,8 +189,8 @@ ul {
 }
 
 .category-score .score-obtained {
-  font-weight: extra-Bold
   color: var(--Dark-gray-blue);
+  font-weight: bolder;
 }
 
 .summary-item.item-reaction {
@@ -236,14 +228,6 @@ ul {
   font-size: 1.125rem;
   font-family:
     hankenMedium,
-    system-ui,
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    Oxygen,
-    Ubuntu,
-    Cantarell,
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
