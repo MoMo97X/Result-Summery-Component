@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub Repository](https://your-solution-url.com](https://github.com/MoMo97X/Result-Summery-Component)
-- Live Site URL: [GitHub Pages]([https://your-live-site-url.com](https://momo97x.github.io/Result-Summery-Component/)
+- Solution URL: [GitHub Repository] (https://github.com/MoMo97X/Result-Summery-Component)
+- Live Site URL: [GitHub Pages] (https://momo97x.github.io/Result-Summery-Component/).
 
 ## My process
 
