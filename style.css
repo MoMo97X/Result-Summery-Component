@@ -270,7 +270,7 @@ ul {
     "Open Sans",
     "Helvetica Neue",
     sans-serif;
-  transition: 0.3s;
+  transition: background-image 0.3s linear;
 }
 
 .summary-section .btn-continue:hover,
