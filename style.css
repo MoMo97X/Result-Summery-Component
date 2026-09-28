@@ -1,0 +1,321 @@
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: hankenMedium;
+  src: url(/assets/fonts/static/HankenGrotesk-Medium.ttf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: hankenBold;
+  src: url(/assets/fonts/static/HankenGrotesk-Bold.ttf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: hankenExtraBold;
+  src: url(/assets/fonts/static/HankenGrotesk-ExtraBold.ttf);
+  font-weight: 800;
+}
+
+:root {
+  /* primary colors */
+  --Light-red: #ff5757;
+  --Orangey-yellow: #ffb01f;
+  --Green-teal: #00bd91;
+  --Cobalt-blue: #1125d4;
+  /* gradients */
+  --Light-slate-blue-background: #7857ff;
+  --Light-royal-blue-background: #2e2be9;
+  --Violet-blue-circle: #4e21ca;
+  --Persian-blue-circle: #2421ca00;
+  /* Neutral colros */
+  --White: #ffffff;
+  --Pale-blue: #ebf1ff;
+  --Light-lavender: #c8c7ff;
+  --Dark-gray-blue: #303b5a;
+  /* font size */
+  --font-size-paragraphs: 1.125rem;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--Pale-blue);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+/* Mobile-First approace */
+
+.container {
+  /* Fluid width: Never smaller than 345px, preferred 90% of screen, max 736px */
+  width: clamp(21.5rem, 100vw, 46rem);
+
+  /* Flex layout defaults to stacked on mobile */
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  overflow: hidden;
+  background-color: var(--White);
+}
+
+/* result start */
+
+.result-card .result-section {
+  padding: 1.25rem;
+  text-align: center;
+  font-family:
+    hankenMedium,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  border-end-start-radius: 1.25rem;
+  border-end-end-radius: 1.25rem;
+  background-image: linear-gradient(
+    0deg,
+    var(--Light-royal-blue-background),
+    var(--Light-slate-blue-background)
+  );
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.result-section .section-title {
+  font-size: 1.25rem;
+  color: var(--Light-lavender);
+}
+
+.result-section .score-circle {
+  display: grid;
+  place-content: center;
+  width: 9.375rem;
+  height: 9.375rem;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    0deg,
+    var(--Persian-blue-circle),
+    var(--Violet-blue-circle)
+  );
+}
+
+.result-section .score-circle .score-number {
+  margin: 0;
+  font-size: 3.75rem;
+  font-family:
+    hankenExtraBold,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  color: var(--White);
+}
+
+.result-section .score-circle .score-total {
+  margin: 0;
+  font-size: 0.75rem;
+  color: var(--Light-lavender);
+}
+
+.result-section .score-status {
+  margin-bottom: 0.5rem;
+  font-size: 1.65rem;
+  color: var(--White);
+}
+
+.result-section .score-description {
+  margin-top: 0;
+  max-width: 75%;
+  color: var(--Pale-blue);
+  opacity: 0.8;
+}
+
+/* summary start */
+
+.summary-section {
+  padding: 1.25rem;
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.summary-section .section-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-family:
+    hankenMedium,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+}
+
+.summary-section .summary-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.summary-list .summary-item {
+  padding-inline: 0.625rem;
+  font-family:
+    hankenExtraBold,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.summary-list .category-info {
+  display: flex;
+}
+
+.category-info .category-name {
+  margin-left: 0.625rem;
+}
+
+.summary-list .category-score {
+  /* color: rgba(200, 199, 255, 0.5); */
+  color: rgba(165, 165, 165);
+}
+
+.category-score .score-obtained {
+  color: var(--Dark-gray-blue);
+}
+
+.summary-item.item-reaction {
+  color: var(--Light-red);
+  background-color: rgba(255, 87, 87, 0.05);
+  border-radius: 0.625rem;
+}
+
+.summary-item.item-memory {
+  color: var(--Orangey-yellow);
+  background-color: rgb(255, 176, 31, 0.05);
+  border-radius: 0.625rem;
+}
+
+.summary-item.item-verbal {
+  color: var(--Green-teal);
+  background-color: rgba(0, 189, 145, 0.05);
+  border-radius: 0.625rem;
+}
+
+.summary-item.item-visual {
+  color: var(--Cobalt-blue);
+  background-color: rgba(17, 37, 212, 0.05);
+  border-radius: 0.625rem;
+}
+
+.summary-section .btn-continue {
+  width: 100%;
+  padding: 1.25rem;
+  border-radius: 1.875rem;
+  border: none;
+  color: var(--White);
+  background-color: var(--Dark-gray-blue);
+  cursor: pointer;
+  font-size: 1.125rem;
+  font-family:
+    hankenMedium,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    "Open Sans",
+    "Helvetica Neue",
+    sans-serif;
+  transition: 0.3s;
+}
+
+.summary-section .btn-continue:hover,
+.summary-section .btn-continue:focus {
+  background-image: linear-gradient(
+    0deg,
+    var(--Light-royal-blue-background),
+    var(--Light-slate-blue-background)
+  );
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: #3d52a3;
+}
+
+/* large screen */
+@media (min-width: 40.625rem) {
+  .container {
+    border-radius: 1.25rem;
+    flex-direction: row;
+  }
+
+  /* Make both panels share equal 50% width */
+  .result-section,
+  .summary-section {
+    flex: 1;
+  }
+
+  .result-card {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 1.25rem;
+  }
+
+  .result-card .result-section {
+    border-radius: 1.25rem;
+    justify-content: center;
+  }
+
+  .summary-section {
+    border-start-end-radius: 1.25rem;
+    border-end-end-radius: 1.25rem;
+  }
+}
